@@ -10,7 +10,7 @@ SoftwareSerial GSMSrl(2, 3); // RX, TX
 
 void setup()
 {
-  // Open serial communications
+  // Open serial communications and wait for port to open:
   Serial.begin(9600);
   GSMSrl.begin(9600);
 }
@@ -70,6 +70,6 @@ int GetBattery () {
 
 void loop() // run over and over
 {
-  Serial.println(GetBatteryAverage(10));
+  Serial.println(GetBatteryAverage(5));
   delay(1000);
 }
